@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int num = sc.nextInt();
+        
+        if (num < 10) {
+            System.out.println("STDOUT");
+            return;
+        }
+        
+        String s = String.valueOf(num);
+        char first = s.charAt(0);
+        char second = s.charAt(1);
+        
+        String swapped = "" + second + first;
+        
+        System.out.println(Integer.parseInt(swapped));
+    }
+}
