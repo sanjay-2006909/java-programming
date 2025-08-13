@@ -1,0 +1,17 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+          Scanner abc = new Scanner(System.in);
+        
+        String input =abc.nextLine();
+                
+        String output = input.replaceAll("\\s+", "");
+                System.out.println(output);
+    }
+}
