@@ -1,0 +1,17 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner abc = new Scanner(System.in);
+        
+        String vowel = abc.nextLine(); 
+        
+        String result = vowel.replaceAll("[aeiouAEIOU]", ""); 
+        System.out.print(result); 
+    }
+}
