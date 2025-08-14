@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class solution {
+
+   
+    public static boolean isArmstrong(int n) {
+        if (n < 0) {
+            return false;  
+        }
+        String s = Integer.toString(n);
+        int digits = s.length();
+        int sum = 0;
+        for (char c : s.toCharArray()) {
+            int digit = c - '0';
+            sum += Math.pow(digit, digits);
+        }
+        return sum == n;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        if (sc.hasNextInt()) {
+            int n = sc.nextInt();
+            if (n < 0 || n >= 100_000) {
+                System.out.println("Invaild Input");
+            } else {
+                System.out.println(isArmstrong(n) ? "yes" : "no");
+            }
+        } else {
+            System.out.println("Invaild Input");
+        }
+        
+    }
+}
