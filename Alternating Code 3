@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+import java.util.Scanner;
+
+public class solution {
+
+    
+    public static boolean isTwoAlternating(String s) {
+        int n = s.length();
+        if (n < 2) {
+            return false; 
+        }
+
+       
+        for (int i = 0; i + 2 < n; i++) {
+            if (s.charAt(i) != s.charAt(i + 2)) {
+                return false;
+            }
+        }
+
+       
+        return s.charAt(0) != s.charAt(1);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String code = sc.next().trim();
+        sc.close();
+
+        System.out.println(isTwoAlternating(code) ? "Yes" : "No");
+    }
+}
