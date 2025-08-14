@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+import java.util.Scanner;
+
+public class OnlyDigitsChecker {
+    public static boolean isOnlyDigits(String s) {
+        if (s == null || s.isEmpty()) {
+            return false;
+        }
+        for (char c : s.toCharArray()) {
+            if (!Character.isDigit(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        sc.close();
+
+        if (isOnlyDigits(input)) {
+            System.out.println("only digits");
+        } else {
+            System.out.println("no");
+        }
+    }
+}
